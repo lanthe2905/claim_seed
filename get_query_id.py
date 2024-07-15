@@ -15,7 +15,7 @@ def run():
   chrome_options = Options()
   profile_path = "C:/Users/Admin/AppData/Local/Google/Chrome/User Data/Person1"
   chrome_options.add_argument(f"user-data-dir={profile_path}")  # Thêm dòng này để sử dụng hồ sơ người dùng hiện tại
-
+  chrome_options.add_argument('--headless=new')
   service = Service(ChromeDriverManager().install())
 
   driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -29,7 +29,7 @@ def run():
 
   sidebar_seed_forum = driver.find_element(by= By.XPATH, value='//a[@href="#6508172553"]')
   sidebar_seed_forum.click()
-  time.sleep(3)
+  time.sleep(5)
 
   play_button = driver.find_element(by= By.CLASS_NAME, value='bot-menu-text')
   play_button.click()

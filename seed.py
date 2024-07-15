@@ -270,7 +270,7 @@ def main():
                     get_tasks()
 
         if break_current_loop == False:
-            for i in range(120, 0, -1):
+            for i in range(300, 0, -1):
                 sys.stdout.write(f"\r{Fore.CYAN+Style.BRIGHT}============ Đã xử lý hết tài khoản, đợi {i} giây trước khi tiếp tục vòng lặp ============")
                 sys.stdout.flush()
                 time.sleep(1)
